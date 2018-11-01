@@ -6,7 +6,7 @@ Definitions of a generic linked-list ADT
 @note
 Code based on content from "Mastering Algorithms with C" (O'Reilly 1999)
 
-@author Justin Hadella
+@author Justin Hadella (pitchnogle@gmail.com)
 */
 #ifndef LIST_h
 #define LIST_h
@@ -58,7 +58,7 @@ Function to initialize a linked-list
 Must be called before list can be used by any other operation
 
 The _destroy_ argument provides a way to free dynamically allocated data when
-_list_destroy_ is called. For example, if the list contains data dynamically
+*list_destroy* is called. For example, if the list contains data dynamically
 allocated using _malloc_, _destroy_ should be set to _free_ to free the data as
 the linked-list is destroyed. For a linked-list containing data that should not
 be freed, _destroy_ should be set to NULL.
@@ -73,12 +73,12 @@ void list_init(List_t *list, void (*destroy)(void *data));
 /**
 Function to destroy a linked-list
 
-The _list_destroy_ operation removes all elements from a linked-list and calls
-the function passed as _destroy_ to _list_init_ once for each element as it is
+The *list_destroy* operation removes all elements from a linked-list and calls
+the function passed as _destroy_ to *list_init* once for each element as it is
 removed, provided _destroy_ was not set to NULL.
 
 @note
-No operation is permitted after _list_destroy()_ is called unless _list_init()_
+No operation is permitted after *list_destroy()* is called unless *list_init()*
 is called again. 
 
 Complexity: O(n)
@@ -109,13 +109,13 @@ int list_insert_next(List_t *list, List_Element_t *element, const void *data);
 Function to remove an element from a linked list
 
 Removes the element just past _element_ from the linked-list. If _element_ is
-NULL, the element at the head of the list is removed. Upon returnm _data_ 
+NULL, the element at the head of the list is removed. Upon return _data_ 
 points to the data stored in the element that was removed.
 
 Complexity: O(1)
 
 @param [in,out] *list     The linked-list to destroy
-@param [in]     *element  Pointer to elemement to remove after
+@param [in]     *element  Pointer to element to remove after
 @param [out]    **data    The data removed
 
 @return 0 if inserting into list was successful, otherwise -1
@@ -138,12 +138,12 @@ MACRO that evaluates to the element at the tail of a linked-list
 #define list_tail(list) ((list)->tail)
 
 /**
-MACRO that determines whether element is head of linked-list
+MACRO that determines whether element is the head of linked-list
 */
 #define list_is_head(list, element) ((element) == (list)->head ? 1 : 0)
 
 /**
-MACRO that determines whether element is tail of linked-list
+MACRO that determines whether element is the tail of linked-list
 */
 #define list_is_tail(element) ((element)->next == NULL ? 1 : 0)
 

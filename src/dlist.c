@@ -3,7 +3,7 @@
 
 See header
 
-@author Justin Hadella
+@author Justin Hadella (pitchnogle@gmail.com)
 */
 
 #include <stdlib.h>

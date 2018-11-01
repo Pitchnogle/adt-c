@@ -1,4 +1,4 @@
-# algorithms-c/example/CMakeLists.txt
+# algorithms-c/examples/CMakeLists.txt
 #
 
 # A linked-list example

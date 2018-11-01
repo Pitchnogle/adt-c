@@ -3,7 +3,7 @@
 
 See header
 
-@author Justin Hadella
+@author Justin Hadella (pitchnogle@gmail.com)
 */
 
 #include <stdlib.h>
@@ -36,7 +36,7 @@ void list_destroy(List_t *list)
     }
   }
 
-  // No operations permitted a this point but clear memory as precaution
+  // No operations permitted at this point -- clear memory as precaution
   memset(list, 0, sizeof (List_t));
 }
 
@@ -86,8 +86,6 @@ int list_remove_next(List_t *list, List_Element_t *element, void **data)
   // Check for empty list!
   if (list_size(list) == 0)
     return -1;
-
-  // Remove the element from the linked-list
 
   if (element == NULL) {
     // Remove from the head of the linked-list

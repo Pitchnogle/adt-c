@@ -1,9 +1,9 @@
-/*
+/**
 @file list_example.c
 @brief 
 Example usage of linked-list ADT
 
-@author Justin Hadella
+@author Justin Hadella (pitchnogle@gmail.com)
 */
 #include <stdio.h>
 #include <stdlib.h>
