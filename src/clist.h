@@ -24,7 +24,7 @@ extern "C"
 
 /**
 @struct CList_Element_t
-Generic cicular linked-list element
+Generic circular linked-list element
 */
 typedef struct CList_Element_T {
   void *data;                   ///< Pointer to data
@@ -34,7 +34,7 @@ typedef struct CList_Element_T {
 
 /**
 @struct CList_t
-Generic cicular linked-list
+Generic circular linked-list
 */
 typedef struct CList_T {
   int size; ///< Number of elements in list
@@ -87,7 +87,7 @@ Complexity: O(n)
 void clist_destroy(CList_t *list);
 
 /**
-Function to insert an element into a cicular linked-list
+Function to insert an element into a circular linked-list
 
 Inserts an element just after _element_ into the circular linked-list. If 
 _element_ is NULL, the new element is inserted at the head of the list. The
