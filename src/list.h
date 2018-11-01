@@ -114,7 +114,7 @@ points to the data stored in the element that was removed.
 
 Complexity: O(1)
 
-@param [in,out] *list     The linked-list to destroy
+@param [in,out] *list     The linked-list to remove element from
 @param [in]     *element  Pointer to element to remove after
 @param [out]    **data    The data removed
 

@@ -62,8 +62,8 @@ Must be called before list can be used by any other operation
 The _destroy_ argument provides a way to free dynamically allocated data when
 *dlist_destroy* is called. For example, if the list contains data dynamically
 allocated using _malloc_, _destroy_ should be set to _free_ to free the data as
-the doubly linked-list is destroyed. For a linked-list containing data that 
-should not be freed, _destroy_ should be set to NULL.
+the doubly linked-list is destroyed. For a doubly linked-list containing data 
+that should not be freed, _destroy_ should be set to NULL.
 
 Complexity: O(1)
 
@@ -85,7 +85,7 @@ is called again.
 
 Complexity: O(n)
 
-@param [in,out] *list  The linked-list to destroy
+@param [in,out] *list  The doubly linked-list to destroy
 */
 void dlist_destroy(DList_t *list);
 
@@ -99,7 +99,7 @@ valid as long as the element remains in the list.
 
 Complexity: O(1)
 
-@param [in,out] *list     The linked-list to insert element into
+@param [in,out] *list     The doubly linked-list to insert element into
 @param [in]     *element  Pointer to element to insert after
 @param [in]     *data     The data to insert
 
@@ -117,7 +117,7 @@ valid as long as the element remains in the list.
 
 Complexity: O(1)
 
-@param [in,out] *list     The linked-list to insert element into
+@param [in,out] *list     The doubly linked-list to insert element into
 @param [in]     *element  Pointer to element to insert before
 @param [in]     *data     The data to insert
 
@@ -133,7 +133,7 @@ return _data_ points to the data stored in the element that was removed.
 
 Complexity: O(1)
 
-@param [in,out] *list     The linked-list to destroy
+@param [in,out] *list     The doubly linked-list to remove element from
 @param [in]     *element  Pointer to element to remove
 @param [out]    **data    Pointer to data removed
 
