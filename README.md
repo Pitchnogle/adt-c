@@ -1,1 +1,1 @@
-# algorithms-c
+# adt-c
