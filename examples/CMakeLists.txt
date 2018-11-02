@@ -9,3 +9,9 @@ add_executable(dlist_example dlist_example.c ${SRC_DIR}/dlist.c)
 
 # A circular linked-list example
 add_executable(clist_example clist_example.c ${SRC_DIR}/clist.c)
+
+# A stack example
+add_executable(stack_example stack_example.c ${SRC_DIR}/stack.c ${SRC_DIR}/list.c)
+
+# A queue example
+add_executable(queue_example queue_example.c ${SRC_DIR}/queue.c ${SRC_DIR}/list.c)
