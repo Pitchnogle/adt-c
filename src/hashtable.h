@@ -32,7 +32,7 @@ typedef struct HashTable_T {
   void (*destroy)(void *data);
 
   int size;       ///< The number of elements in the hash table
-  List_t *table;  ///< The hash table itself is a pointer to array of lists
+  List_t *table;  ///< The hash table itself is a pointer to array of linked-lists
 
 } HashTable_t;
 
@@ -60,7 +60,7 @@ Complexity: O(m), where *m* is the number of buckets in the hash table
 @param [in]  *match   Pointer to user hash key comparison function
 @param [in]  *destroy Pointer to function to free element memory
 
-@returns 0 if hash table initialization successful, otherwise -1
+@returns 0 if hash table init successful, otherwise -1
 */
 int hashtable_init(HashTable_t *htable, int buckets, 
                    int (*hash)(const void *key),
@@ -70,13 +70,13 @@ int hashtable_init(HashTable_t *htable, int buckets,
 /**
 Function to destroy a chained hash table
 
-The *hashtable_destroy* operation removes all elements from chained hash table
-and calls the function passed as _destroy_ to *hashtable_init* once for each 
-element as it is removed, provided _destroy_ was not set to NULL.
+The *hashtable_destroy* operation removes all elements from  hash table and 
+calls the function passed as _destroy_ to *hashtable_init* once for each element
+as it is removed, provided _destroy_ was not set to NULL.
 
 Complexity: O(m), where *m* is the number of buckets in the hash table
 
-@param [in,out] *htable  The chained hash table to destroy
+@param [in,out] *htable  The hash table to destroy
 */
 void hashtable_destroy(HashTable_t *htable);
 
@@ -85,7 +85,7 @@ Function to insert an element into a chained hash table
 
 Complexity: O(1)
 
-@param [in,out] *htable  The chained hash table to insert into
+@param [in,out] *htable  The hash table to insert into
 @param [in]     *data    The data to insert
 
 @returns 0 if inserting the element was successful, 1 if the element was already
@@ -98,7 +98,7 @@ Function to remove an element from a chained hash table
 
 Complexity: O(1)
 
-@param [in,out] *htable  The chained hash table remove data from
+@param [in,out] *htable  The hash table remove data from
 @param [out]    **data   The data removed
 
 @returns 0 if removing the element was successful, otherwise -1
@@ -110,10 +110,10 @@ Function to determine if an element is contained within the chained hash table
 
 Complexity: O(1)
 
-@param [in,out] *htable  The chained hash table to lookup
+@param [in,out] *htable  The hash table to lookup
 @param [out]    **data   Pointer to matching data (NULL if not found)
 
-@returns 0 if the element was found in the chained hash table, otherwise -1
+@returns 0 if the element was found in the hash table, otherwise -1
 */
 int hashtable_lookup(HashTable_t *htable, void **data);
 
