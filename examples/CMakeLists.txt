@@ -15,3 +15,6 @@ add_executable(stack_example stack_example.c ${SRC_DIR}/stack.c ${SRC_DIR}/list.
 
 # A queue example
 add_executable(queue_example queue_example.c ${SRC_DIR}/queue.c ${SRC_DIR}/list.c)
+
+# A chained hash table example
+add_executable(hashtable_example hashtable_example.c ${SRC_DIR}/hashtable.c ${SRC_DIR}/list.c)
