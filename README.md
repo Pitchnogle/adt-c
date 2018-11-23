@@ -18,7 +18,7 @@ A collection of abstract data types in the C programming language
 
 ### Build Instructions
 
-The code herein is intented for an out-of-source build
+The code herein is intended for an out-of-source build
 
 ```
 mkdir build
@@ -26,3 +26,9 @@ cd build
 cmake ..
 make
 ```
+
+### Notes
+
+At this point, the collection of adt's are not made into a library, but this would be a natural next step. The code is documented using Doxygen style tags.
+
+The code is refactored but heavily inspired by the adt's presented in [Mastering Algorithms with C](http://shop.oreilly.com/product/9781565924536.do) by O'Reilly.
