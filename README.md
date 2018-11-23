@@ -11,7 +11,7 @@ A collection of abstract data types in the C programming language
 - [Chained Hash Table](src/hashtable.h)
 
 ### Contents
-- src<br>
+- [src](src)<br>
   *Contains the source code for various adt's*
-- example<br>
+- [examples](examples)<br>
   *Contains example code using the various adt's*
