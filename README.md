@@ -15,3 +15,14 @@ A collection of abstract data types in the C programming language
   *Contains the source code for various adt's*
 - [examples](examples)<br>
   *Contains example code using the various adt's*
+
+### Build Instructions
+
+The code herein is intented for an out-of-source build
+
+```
+mkdir build
+cd build
+cmake ..
+make
+```
