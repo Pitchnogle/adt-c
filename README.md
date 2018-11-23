@@ -1,1 +1,17 @@
 # adt-c
+
+A collection of abstract data types in the C programming language
+
+### Abstract Data Types
+- [Linked-List](src/list.h)
+- [Doubly Linked-List](src/dlist.h)
+- [Circular Linked-List](src/clist.h)
+- [Stack](src/stack.h)
+- [Queue](src/queue.h)
+- [Chained Hash Table](src/hashtable.h)
+
+### Contents
+- src<br>
+  *Contains the source code for various adt's*
+- example<br>
+  *Contains example code using the various adt's*
